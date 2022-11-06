@@ -4,14 +4,25 @@ import styles from './index.module.scss';
 
 
 const Title = ({
-    children,
-    className
+    type,
+    className,
+    children
+    
 }) => {
+  if(type === 'small') {
   return (
-    <div className={cl(className, styles.title)}>
+    <h3 className={cl(className, styles.title, styles.titleSmall)}>
            {children}
-    </div>
-  )
-}
+    </h3>
+  );
+  }
+
+  return (
+    <h2 className={cl(className, styles.title, styles.titleMedium)}>
+           {children}
+    </h2>
+  );
+  }
+
 
 export default Title;

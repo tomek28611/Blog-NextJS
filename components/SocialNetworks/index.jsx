@@ -2,7 +2,7 @@ import React from 'react';
 import cl from 'classnames';
 import styles from './index.module.scss';
 import { AiFillGithub, AiFillYoutube, AiFillTwitterCircle, AiFillLinkedin} from "react-icons/ai"
-
+import ScreenEgg from '../ScreenEgg';
 
 const socialNetworks = [
   {
@@ -32,6 +32,7 @@ const SocialNetworks = ({
     className
 }) => {
   return (
+    <ScreenEgg>
     <ul className={cl(className, styles.list)}>
         {socialNetworks.map((socialNetwork) => (
           <li key={socialNetwork.id}
@@ -54,6 +55,7 @@ const SocialNetworks = ({
           </li>
         ))}
     </ul>
+    </ScreenEgg>
   )
 }
 

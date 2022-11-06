@@ -4,12 +4,14 @@ import styles from './index.module.scss';
 
 
 const ScreenEgg = ({
-
-    className
+    className,
+    type,
+    children
 }) => {
   return (
-    <div className={cl(className, styles.screenEgg)}>
-          ScreenEgg  
+    <div className={cl(className, styles.screenEgg, 
+    type === 'right' ? styles.screenEggRight : styles.screenEggLeft)}>
+          {children}
     </div>
   )
 }

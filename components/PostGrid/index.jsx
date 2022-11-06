@@ -4,12 +4,12 @@ import styles from './index.module.scss';
 
 
 const PostGrid = ({
-
-    className
+    className,
+    children
 }) => {
   return (
     <div className={cl(className, styles.postGrid)}>
-            PostGrid
+            {children}
     </div>
   )
 }
